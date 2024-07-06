@@ -6,16 +6,15 @@ const fetchSuperHeroes = () => {
 };
 
 export const RQSuperHeroesPage = () => {
-  const { isLoading, data, isError, error } = useQuery(
+  const { isLoading, data, isError, error, refetch, isFetching } = useQuery(
     "super-heroes",
     fetchSuperHeroes,
     {
-      refetchInterval: false, // default value. the oricess of fetching data of regular intervals (to get up to date on time)
-      refetchIntervalInBackground: false, // default value, polling/ automatic fetching is paused when window lose focus,So set "true" to continue fetching
+      enabled: false, //default value is true, when we want to fetch manaual, set enabled : false and use "refetch" and "isFetching" in useQuery
     }
   );
 
-  if (isLoading) {
+  if (isLoading || isFetching) {
     return <h2>Loading...</h2>;
   }
 
@@ -26,6 +25,7 @@ export const RQSuperHeroesPage = () => {
   return (
     <>
       <h2>RQ Super Heroes Page</h2>
+      <button onClick={refetch}>Fetch Data</button>
       {data?.data.map((hero) => {
         return <div>{hero.name}</div>;
       })}
