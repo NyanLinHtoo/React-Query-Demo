@@ -10,7 +10,8 @@ export const RQSuperHeroesPage = () => {
     "super-heroes",
     fetchSuperHeroes,
     {
-      cacheTime: 5000,
+      refetchOnMount: true, // default value. refetch on component mount if data is "stale"
+      refetchOnWindowFocus: true, // default value. whatever lose focus or get focus, refetch !!
     }
   );
 
