@@ -10,8 +10,8 @@ export const RQSuperHeroesPage = () => {
     "super-heroes",
     fetchSuperHeroes,
     {
-      refetchOnMount: true, // default value. refetch on component mount if data is "stale"
-      refetchOnWindowFocus: true, // default value. whatever lose focus or get focus, refetch !!
+      refetchInterval: false, // default value. the oricess of fetching data of regular intervals (to get up to date on time)
+      refetchIntervalInBackground: false, // default value, polling/ automatic fetching is paused when window lose focus,So set "true" to continue fetching
     }
   );
 
