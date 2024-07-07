@@ -10,7 +10,7 @@ export const RQSuperHeroesPage = () => {
     "super-heroes",
     fetchSuperHeroes,
     {
-      enabled: false, //default value is true, when we want to fetch manaual, set enabled : false and use "refetch" and "isFetching" in useQuery
+      enabled: false, //default value is true, when we want to fetch manual, set enabled : false and use "refetch" and "isFetching" in useQuery
     }
   );
 
@@ -27,7 +27,7 @@ export const RQSuperHeroesPage = () => {
       <h2>RQ Super Heroes Page</h2>
       <button onClick={refetch}>Fetch Data</button>
       {data?.data.map((hero) => {
-        return <div>{hero.name}</div>;
+        return <div key={hero.id}>{hero.name}</div>;
       })}
     </>
   );
