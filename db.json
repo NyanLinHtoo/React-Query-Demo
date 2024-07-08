@@ -19,6 +19,11 @@
       "name": "The Flash",
       "alterEgo": "Bella",
       "id": 4
+    },
+    {
+      "name": "Naruto",
+      "alterEgo": "Boruto",
+      "id": 5
     }
   ],
   "friends": [
