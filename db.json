@@ -24,6 +24,16 @@
       "name": "Naruto",
       "alterEgo": "Boruto",
       "id": 5
+    },
+    {
+      "name": "Naruto",
+      "alterEgo": "Boruto",
+      "id": 6
+    },
+    {
+      "name": "Catwomen",
+      "alterEgo": "Cat",
+      "id": 7
     }
   ],
   "friends": [
