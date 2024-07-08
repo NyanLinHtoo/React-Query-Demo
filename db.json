@@ -34,6 +34,11 @@
       "name": "Catwomen",
       "alterEgo": "Cat",
       "id": 7
+    },
+    {
+      "name": "Catwomen 2",
+      "alterEgo": "Cat 2",
+      "id": 8
     }
   ],
   "friends": [
